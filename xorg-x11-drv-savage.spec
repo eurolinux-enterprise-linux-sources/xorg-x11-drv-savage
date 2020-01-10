@@ -4,8 +4,8 @@
 
 Summary:   Xorg X11 savage video driver
 Name:      xorg-x11-drv-savage
-Version:   2.3.1
-Release:   1.1%{?dist}
+Version:   2.3.2
+Release:   1%{?dist}
 URL:       http://www.x.org
 License: MIT
 Group:     User Interface/X Hardware Support
@@ -21,7 +21,8 @@ BuildRequires: mesa-libGL-devel >= 6.4-4
 BuildRequires: libdrm-devel >= 2.0-1
 
 Requires:  hwdata
-Requires:  xorg-x11-server-Xorg >= 1.4.99.1
+Requires:  Xorg %(xserver-sdk-abi-requires ansic)
+Requires:  Xorg %(xserver-sdk-abi-requires videodrv)
 
 %description 
 X.Org X11 savage video driver.
@@ -55,6 +56,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man4/savage.4*
 
 %changelog
+* Tue Jun 28 2011 Ben Skeggs <bskeggs@redhat.com> 2.3.2-1
+- upstream release 2.3.2
+
 * Mon Nov 30 2009 Dennis Gregorovic <dgregor@redhat.com> - 2.3.1-1.1
 - Rebuilt for RHEL 6
 
