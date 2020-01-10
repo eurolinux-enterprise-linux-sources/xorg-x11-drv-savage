@@ -5,7 +5,7 @@
 Summary:   Xorg X11 savage video driver
 Name:      xorg-x11-drv-savage
 Version:   2.3.7
-Release:   2%{?dist}
+Release:   3%{?dist}
 URL:       http://www.x.org
 License: MIT
 Group:     User Interface/X Hardware Support
@@ -50,6 +50,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man4/savage.4*
 
 %changelog
+* Wed Nov 11 2015 Adam Jackson <ajax@redhat.com> - 2.3.7-3
+- Rebuild for server 1.17
+
 * Mon Apr 28 2014 Adam Jackson <ajax@redhat.com> - 2.3.7-2
 - Fix rhel arch list
 
